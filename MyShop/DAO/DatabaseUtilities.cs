@@ -29,10 +29,10 @@ namespace MyShop.DAO
         }
 
         public DatabaseUtilitites() {
-            _server = "sqlexpress";
-            _databaseName = "RawDB";
-            _user = "admin";
-            _password = "admin";
+            _server = "DESKTOP-4S4FMFG\\DUCHOA";
+            _databaseName = "MyShopDB";
+            _user = "sa";
+            _password = "1234";
             _connection = null;
         }
 
@@ -44,11 +44,12 @@ namespace MyShop.DAO
             _password = password;
 
             string connectionString = $"""
-                Server = .\{server};
-                User ID = {user}; Password={password};
-                Database = {databaseName};
-                TrustServerCertificate=True
-                """;
+            Data Source={server};
+            Initial Catalog={databaseName};
+            User ID={user};
+            Password={password};
+            Trust Server Certificate=True
+            """;
 
             _connection = new SqlConnection(connectionString);
 
