@@ -34,22 +34,8 @@ namespace MyShop.DAO
             _user = "sa";
             _password = "1234";
             _connection = null;
-        }
 
-        public DatabaseUtilitites(string server, string databaseName, string user, string password)
-        {
-            _server = server;
-            _databaseName = databaseName;
-            _user = user;
-            _password = password;
-
-            string connectionString = $"""
-            Data Source={server};
-            Initial Catalog={databaseName};
-            User ID={user};
-            Password={password};
-            Trust Server Certificate=True
-            """;
+            string connectionString = $"""Data Source={_server};Initial Catalog={_databaseName};User ID={_user};Password={_password};Trust Server Certificate=True""";
 
             _connection = new SqlConnection(connectionString);
 
@@ -66,6 +52,7 @@ namespace MyShop.DAO
 
             _instance = this;
         }
+
 
         public SqlConnection connection { get { return _connection; } }
     }

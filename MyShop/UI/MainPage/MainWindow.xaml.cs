@@ -48,12 +48,7 @@ namespace MyShop.UI.MainPage
            
             // init db
 
-            new DatabaseUtilitites(
-                "sqlexpress",
-                "MyShopDB",
-                "admin",
-                "admin"
-                );
+            new DatabaseUtilitites();
 
             // Load Nav Background
             this.DataContext = new Resoures()
