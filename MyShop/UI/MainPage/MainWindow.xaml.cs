@@ -47,7 +47,7 @@ namespace MyShop.UI.MainPage
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-           
+
             // init db
 
             //new DatabaseUtilitites(

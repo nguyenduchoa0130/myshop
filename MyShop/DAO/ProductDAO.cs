@@ -117,8 +117,8 @@ namespace MyShop.DAO
         public int insertProduct(ProductDTO productDTO)
         {
             // insert SQL
-            string sql = "insert into product(ProName, Ram, Rom, ScreenSize, TinyDes, Price, Trademark, BatteryCapacity, CatID, Quantity, PromoCode,Block)" +
-            "values(@ProName, @Ram, @Rom, @ScreenSize, @TinyDes, @Price, @Trademark, @BatteryCapacity, @CatID, @Quantity,  @PromoCode,@Block)";
+            string sql = "insert into product(ProName, Ram, Rom, ScreenSize, TinyDes, Price, Trademark, BatteryCapacity, CatID, Quantity,Block)" +
+            "values(@ProName, @Ram, @Rom, @ScreenSize, @TinyDes, @Price, @Trademark, @BatteryCapacity, @CatID, @Quantity,@Block)";
             var command = new SqlCommand(sql, db.connection);
 
             command.Parameters.Add("@ProName", SqlDbType.NVarChar).Value = productDTO.ProName;
@@ -131,7 +131,7 @@ namespace MyShop.DAO
             command.Parameters.Add("@BatteryCapacity", SqlDbType.Int).Value = productDTO.BatteryCapacity;
             command.Parameters.Add("@CatID", SqlDbType.Int).Value = productDTO.CatID;
             command.Parameters.Add("@Quantity", SqlDbType.Int).Value = productDTO.Quantity;
-            command.Parameters.Add("@PromoCode", SqlDbType.NVarChar).Value = productDTO.PromoCode;
+            //command.Parameters.Add("@PromoCode", SqlDbType.NVarChar).Value = productDTO.PromoCode;
             command.Parameters.Add("@Block", SqlDbType.Int).Value = productDTO.Block;
 
             command.ExecuteNonQuery();
@@ -158,7 +158,7 @@ namespace MyShop.DAO
             string sql = "update product " +
                 "set ProName =  @ProName, Ram = @Ram, Rom = @Rom, ScreenSize = @ScreenSize, TinyDes = @TinyDes," +
                 "Price = @Price, Trademark = @Trademark, BatteryCapacity = @BatteryCapacity," +
-                "CatID = @CatID, Quantity = @Quantity,  PromoCode = @PromoCode, Block = @Block " +
+                "CatID = @CatID, Quantity = @Quantity, Block = @Block " +
                 "where ProID = @ProID";
             var command = new SqlCommand(sql, db.connection);
 
@@ -173,7 +173,7 @@ namespace MyShop.DAO
             command.Parameters.Add("@BatteryCapacity", SqlDbType.Int).Value = productDTO.BatteryCapacity;
             command.Parameters.Add("@CatID", SqlDbType.Int).Value = productDTO.CatID;
             command.Parameters.Add("@Quantity", SqlDbType.Int).Value = productDTO.Quantity;
-            command.Parameters.Add("@PromoCode", SqlDbType.NVarChar).Value = productDTO.PromoCode;
+            //command.Parameters.Add("@PromoCode", SqlDbType.NVarChar).Value = productDTO.PromoCode;
             command.Parameters.Add("@Block", SqlDbType.Int).Value = productDTO.Block;
 
             command.ExecuteNonQuery();

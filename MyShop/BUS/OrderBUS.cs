@@ -119,7 +119,24 @@ namespace MyShop.BUS
         {
             float profit = 1.07f;
 
-            return productPrice * (decimal)profit;
+            decimal result = productPrice * (decimal)profit;
+
+            return result;
+        }
+
+        public int countTotalOrderbyLastWeek()
+        {
+            var orders = _orderDAO.getAll();
+
+            DateTime today = DateTime.Today;
+            DateTime startOfWeek = today.AddDays(-(int)today.DayOfWeek);
+            DateTime endOfWeek = startOfWeek.AddDays(6);
+
+            var ordersByLastWeek = orders.Where(
+                order => order.CreateAt >= startOfWeek.Date && order.CreateAt <= endOfWeek.Date)
+                .ToList();
+
+            return ordersByLastWeek.Count;
         }
     }
 }

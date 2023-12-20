@@ -202,7 +202,7 @@ namespace MyShop.DAO
                     OrderID = (int)reader["OrderID"],
                     CusID = (int)reader["CusID"],
                     CreateAt = (DateTime)reader["CreateAt"],
-                    // này tránh lỗi :)
+                    // này để tránh lỗi :)
                     FinalTotal = reader["FinalTotal"] == DBNull.Value ? null : (decimal?)reader["FinalTotal"],
                     ProfitTotal = reader["ProfitTotal"] == DBNull.Value ? null : (decimal?)reader["ProfitTotal"]
             };
@@ -210,11 +210,29 @@ namespace MyShop.DAO
                 list.Add(shopOrder);
             }
 
-
-
             reader.Close();
 
             return list;
+        }
+
+        public int countTotalOrder()
+        {
+            int total = 0;
+            string sql = $"""
+                select count(*) as sum from shop_order
+                """;
+
+            var command = new SqlCommand(sql, db.connection);
+
+            var reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                total = (int)reader["sum"];
+            }
+
+            reader.Close();
+
+            return total;
         }
     }
 }

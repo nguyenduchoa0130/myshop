@@ -1,15 +1,18 @@
 ﻿using Azure;
+using DocumentFormat.OpenXml.Spreadsheet;
 using Microsoft.Win32;
 using MyShop.BUS;
 using MyShop.DAO;
 using MyShop.DTO;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-
+using System.Windows.Media;
+using System.Xml.Linq;
 
 namespace MyShop.UI.MainPage.Pages
 {
@@ -18,6 +21,40 @@ namespace MyShop.UI.MainPage.Pages
     /// </summary>
     public partial class Home : System.Windows.Controls.Page
     {
+        class Resources
+        {
+            public string FirstIcon { get; set; }
+            public string LastIcon { get; set; }
+            public string NextIcon { get; set; }
+            public string PrevIcon { get; set; }
+            public int ProductListWidth { get; set; }
+        }
+
+        // Mục đích là đổ dữ liệu của Class này lên UI
+        class Data
+        {
+            public string? ProName { get; set; }
+            public string? ProImage { get; set; }
+            public string? CatIcon { get; set; }
+            public string? CatName { get; set; }
+            public decimal? Price { get; set; }
+
+            public int ProductItemWitdh { get; set; }
+            public string ScaleValue { get; set; }
+
+            public Data(ProductDTO productDTO, CategoryDTO categoryDTO)
+            {
+                ProName = productDTO.ProName;
+                ProImage = productDTO.ImagePath;
+                Price = productDTO.Price;
+                CatIcon = categoryDTO.CatIcon;
+                CatName = categoryDTO.CatName;
+                ProductItemWitdh = 200;
+                ScaleValue = "1";
+            }
+        }
+
+
         private List<ProductDTO>? _products = null;
         private string _currentKey = "";
         private int _currentPage = 1;
@@ -30,9 +67,9 @@ namespace MyShop.UI.MainPage.Pages
         private Frame _pageNavigation;
         private FileInfo _selectedFile;
 
-        public Tuple<string, int ,int,Decimal?, Decimal?> getCurrentState()
+        public Tuple<string, int, int, Decimal?, Decimal?> getCurrentState()
         {
-            return new Tuple<string,int,int, Decimal?, Decimal?>
+            return new Tuple<string, int, int, Decimal?, Decimal?>
                 (
                     _currentKey,
                     _currentPage,
@@ -41,36 +78,6 @@ namespace MyShop.UI.MainPage.Pages
                     _currentEndPrice
                 );
         }
-
-        class Resources
-        {
-            public string FirstIcon { get; set; }
-            public string LastIcon { get; set; }
-            public string NextIcon { get; set; }
-            public string PrevIcon { get; set; }
-        }
-
-
-        // Mục đích là đổ dữ liệu của Class này lên UI
-        class Data
-        {
-            public string? ProName { get; set; }
-            public string? ProImage { get; set; }
-            public string? CatIcon { get; set; }
-            public string? CatName { get; set; }
-            public decimal? originalPrice { get; set; }
-            public decimal? discountedPrice { get; set; }
-            public Data(ProductDTO productDTO, CategoryDTO categoryDTO)
-            {
-                ProName = productDTO.ProName;
-                ProImage = productDTO.ImagePath;
-                originalPrice = productDTO.Price;
-                CatIcon = categoryDTO.CatIcon;
-                CatName = categoryDTO.CatName;
-                discountedPrice = productDTO.OriginPrice;
-            }
-        }
-
 
         public Home(Frame pageNavigation, int page = 1, int currentCurrency = 0, string keyword = "",
             Decimal? currentStartPrice = null, Decimal? currentEndPrice = null
@@ -90,12 +97,14 @@ namespace MyShop.UI.MainPage.Pages
         {
             updateDataSource(_currentPage, _currentKey, _currentCurrency, _currentStartPrice, _currentEndPrice);
             updatePagingInfo();
+
+
             this.DataContext = new Resources()
             {
                 FirstIcon = "Assets/Images/ic-first.png",
                 LastIcon = "Assets/Images/ic-last.png",
                 NextIcon = "Assets/Images/ic-next.png",
-                PrevIcon = "Assets/Images/ic-prev.png"
+                PrevIcon = "Assets/Images/ic-prev.png",
             };
         }
 
@@ -107,8 +116,8 @@ namespace MyShop.UI.MainPage.Pages
             ProductBUS productBUS = new ProductBUS();
             CategoryBUS categoryBUS = new CategoryBUS();
             (_products, _totalItems) = productBUS.findProductBySearch(_currentPage, _rowsPerPage, keyword, currentStartPrice, currentEndPrice);
-            
-            
+
+
             foreach (var product in _products)
             {
                 var category = categoryBUS.getCategoryById(product.CatID);
@@ -158,7 +167,8 @@ namespace MyShop.UI.MainPage.Pages
 
         private void PrevButton_Click(object sender, RoutedEventArgs e)
         {
-            if (_currentPage > 1) {
+            if (_currentPage > 1)
+            {
                 _currentPage--;
                 updateDataSource(_currentPage, _currentKey, _currentCurrency, _currentStartPrice, _currentEndPrice);
                 updatePagingInfo();
@@ -244,7 +254,8 @@ namespace MyShop.UI.MainPage.Pages
             int i = dataListView.SelectedIndex;
 
             var product = _products[i];
-            if (product != null ) {
+            if (product != null)
+            {
                 _pageNavigation.NavigationService.Navigate(new ProductDetail(this, product, _pageNavigation));
             }
         }
@@ -270,15 +281,35 @@ namespace MyShop.UI.MainPage.Pages
 
                 var products = sheetBUS.ReadExcelFile(filename);
 
-                foreach(var product in products)
+                foreach (var product in products)
                 {
                     productBUS.saveProduct(product);
                 }
                 MessageBox.Show("Đã thêm thành công", "Thông báo");
-            } else
+            }
+            else
             {
                 MessageBox.Show("Đã có lỗi xảy ra!", "Thông báo");
             }
+        }
+
+        bool flag = false;
+
+        private void Option_Click(object sender, RoutedEventArgs e)
+        {
+            if (flag == false)
+            {
+                _rowsPerPage = 6;
+            }
+            if (flag == true)
+            {
+                _rowsPerPage = 9;
+            }
+
+            updateDataSource(1, _currentKey, _currentCurrency, _currentStartPrice, _currentEndPrice);
+            updatePagingInfo();
+
+            flag = !flag;
         }
     }
 }

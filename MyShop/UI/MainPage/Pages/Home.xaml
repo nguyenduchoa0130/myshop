@@ -76,7 +76,7 @@
                             <Style TargetType="{x:Type TextBlock}">
                                 <Setter Property="Visibility" Value="Collapsed"/>
                                 <Style.Triggers>
-                                    <DataTrigger Binding="{Binding Text, ElementName=SearchTermTextBox}" Value=" ">
+                                    <DataTrigger Binding="{Binding Text, ElementName=SearchTermTextBox}" Value="">
                                         <Setter Property="Visibility" Value="Visible"/>
                                     </DataTrigger>
                                 </Style.Triggers>
@@ -153,21 +153,25 @@
                 ScrollViewer.VerticalScrollBarVisibility="Disabled"
                 HorizontalAlignment="Left"
                 HorizontalContentAlignment="Center"
-                Margin="50,0,0,0"
+                VerticalContentAlignment="Center"
                 BorderThickness="0"
+                Margin="50, 0, 0, 0"
                 Background="Transparent"
                 >
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Width="200"
-                          Margin="0, 0, 0, 0"
-                          Height="140">
+                    <Grid 
+                        Name="ProductItem"
+                        Width="200"
+                        Margin="0, 0, 0, 0"
+                        Height="140">
+
                         <Button Name="ItemButton"
                             HorizontalAlignment="Left"
                             VerticalAlignment="Bottom"
                             Width="155"
                             Margin="10"
-                            Height="98"
+                            Height="83"
                             BorderThickness="0.5"
                             BorderBrush="Orange"
                             Padding="12, 8,8,8"
@@ -206,33 +210,9 @@
 
                                 <!-- binding -->
                                 <TextBlock Name="priceTextBlock"
-                                           Text="{Binding originalPrice, Converter={StaticResource currencyConverter}}"
+                                           Text="{Binding Price, Converter={StaticResource currencyConverter}}"
                                            FontWeight="Bold"
                                            Foreground="#8B4000"/>
-
-                                <TextBlock Name="priceTextBlockAA" 
-                                    FontSize="10" 
-                                    Foreground="Gray">
-                                    <TextBlock.Style>
-                                        <Style TargetType="{x:Type TextBlock}">
-                                            <Style.Triggers>
-                                                <DataTrigger Binding="{Binding discountedPrice}" 
-                                                     Value="0">
-                                                    <Setter Property="TextDecorations" 
-                                                        Value="Strikethrough" />
-                                                    <Setter Property="Visibility" Value="Collapsed" />
-                                                </DataTrigger>
-                                            </Style.Triggers>
-                                        </Style>
-                                    </TextBlock.Style>
-                                    <TextBlock.Text>
-                                        <Binding Path="discountedPrice"
-                                            StringFormat="#,##0 đ" />
-                                    </TextBlock.Text>
-                                 <!--   <TextBlock.TextDecorations>
-                                        <TextDecoration Location="Strikethrough"/>
-                                    </TextBlock.TextDecorations>-->
-                                </TextBlock>
 
                             </StackPanel>
                         </Button>
@@ -304,6 +284,28 @@
                     Height="14"
                     RenderOptions.BitmapScalingMode="HighQuality"
                     Icon="FileExcelOutline"
+                    Foreground="#8B4000"
+                        />
+        </Button>
+
+        <Button
+                Name="Option"
+                Grid.Row="2"
+                Grid.Column="1"
+                Margin="0,0,250,0"
+                Width="28"
+                Height="28"
+                Style="{StaticResource MyButtonStyle}"
+                BorderThickness="0.5"
+                BorderBrush="Orange"
+                HorizontalAlignment="Right"
+                Click="Option_Click"
+            >
+            <fa:ImageAwesome 
+                    Width="14"
+                    Height="14"
+                    RenderOptions.BitmapScalingMode="HighQuality"
+                    Icon="Exchange"
                     Foreground="#8B4000"
                         />
         </Button>
