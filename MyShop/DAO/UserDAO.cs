@@ -59,7 +59,7 @@ namespace MyShop.DAO
             command.Parameters.AddWithValue("@Address", user.Address);
             command.Parameters.AddWithValue("@Tel", user.Tel);
             command.Parameters.AddWithValue("@AvatarPath", user.AvatarPath);
-            command.Parameters.AddWithValue("@IsHide", user.IsHide);
+            command.Parameters.AddWithValue("@IsHide",user.IsHide);
             command.Parameters.AddWithValue("@RoleID", user.RoleID);
 
             var rowsAffected = command.ExecuteNonQuery();

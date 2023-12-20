@@ -58,15 +58,16 @@ namespace MyShop.UI.MainPage.Pages
             public string? ProImage { get; set; }
             public string? CatIcon { get; set; }
             public string? CatName { get; set; }
-            public decimal? Price { get; set; }
-
+            public decimal? originalPrice { get; set; }
+            public decimal? discountedPrice { get; set; }
             public Data(ProductDTO productDTO, CategoryDTO categoryDTO)
             {
                 ProName = productDTO.ProName;
                 ProImage = productDTO.ImagePath;
-                Price = productDTO.Price;
+                originalPrice = productDTO.Price;
                 CatIcon = categoryDTO.CatIcon;
                 CatName = categoryDTO.CatName;
+                discountedPrice = productDTO.OriginPrice;
             }
         }
 
@@ -139,13 +140,6 @@ namespace MyShop.UI.MainPage.Pages
         {
             _totalPages = _totalItems / _rowsPerPage +
                    (_totalItems % _rowsPerPage == 0 ? 0 : 1);
-
-            // Cập nhật ComboBox
-            var lines = new List<Tuple<int, int>>();
-            for (int i = 1; i <= _totalPages; i++)
-            {
-                lines.Add(new Tuple<int, int>(i, _totalPages));
-            }
 
             pageInfoTextBlock.Text = $"{_currentPage}/{_totalPages}";
         }

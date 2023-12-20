@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,13 +29,26 @@ namespace MyShop.DAO
         }
 
         public DatabaseUtilitites() {
-            _server = "DESKTOP-4S4FMFG\\DUCHOA";
+            _server = "QUOCTUAN\\DUCHOA";
             _databaseName = "MyShopDB";
             _user = "sa";
             _password = "1234";
             _connection = null;
+        }
 
-            string connectionString = $"""Data Source={_server};Initial Catalog={_databaseName};User ID={_user};Password={_password};Trust Server Certificate=True""";
+        public DatabaseUtilitites(string server, string databaseName, string user, string password)
+        {
+            _server = server;
+            _databaseName = databaseName;
+            _user = user;
+            _password = password;
+
+            string connectionString = $"""
+                Server = .\{server};
+                User ID = {user}; Password={password};
+                Database = {databaseName};
+                TrustServerCertificate=True
+                """;
 
             _connection = new SqlConnection(connectionString);
 
@@ -52,7 +65,6 @@ namespace MyShop.DAO
 
             _instance = this;
         }
-
 
         public SqlConnection connection { get { return _connection; } }
     }

@@ -24,10 +24,11 @@ namespace MyShop.UI.MainPage
         const int DashBoard = 0;
         const int Home = 1;
         const int Category = 2;
-        const int Order = 3;
-        const int Statistical = 4;
-        const int AboutUs = 5;
-        const int Logout = 6;
+        const int Promotion = 3;
+        const int Order = 4;
+        const int Statistical = 5;
+        const int AboutUs = 6;
+        const int Logout = 7;
         class Resoures
         {
             public string MainBgPath { get; set; }
@@ -42,14 +43,19 @@ namespace MyShop.UI.MainPage
         }
 
         ObservableCollection<Item> Items = null;
-
+        
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
+           
             // init db
 
-            new DatabaseUtilitites();
+            //new DatabaseUtilitites(
+            //    "sqlexpress",
+            //    "MyShopDB",
+            //    "admin",
+            //    "admin"
+            //    );
 
             // Load Nav Background
             this.DataContext = new Resoures()
@@ -76,6 +82,11 @@ namespace MyShop.UI.MainPage
                 {
                     FontIcon = "Gears",
                     ItemName = "Categories"
+                },
+                new Item()
+                {
+                    FontIcon = "Tags",
+                    ItemName = "Promotion"
                 },
                 new Item()
                 {
@@ -120,6 +131,10 @@ namespace MyShop.UI.MainPage
             {
 
                 pageNavigation.NavigationService.Navigate(new ModifyCategory(pageNavigation));
+            }
+            if (selectedIndex == Promotion)
+            {
+                pageNavigation.NavigationService.Navigate(new ModifyPromotion(pageNavigation));
             }
             if (selectedIndex == Order)
             {
@@ -219,7 +234,7 @@ namespace MyShop.UI.MainPage
 
         private void resetBorder()
         {
-            foreach (var item in ListOfItems.Items)
+            foreach(var item in ListOfItems.Items)
             {
                 var container = ListOfItems.ItemContainerGenerator.ContainerFromItem(item) as ListViewItem;
                 if (container != null)

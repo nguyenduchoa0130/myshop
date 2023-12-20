@@ -70,7 +70,12 @@ namespace MyShop.UI.LoginPage
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            new DatabaseUtilitites();
+            new DatabaseUtilitites(
+                  "sqlexpress",
+                  "MyShopDB_7",
+                  "admin",
+                  "admin"
+            );
 
             if (Properties.Settings.Default.UsernameRemember)
             {
