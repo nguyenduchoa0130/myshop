@@ -1,5 +1,6 @@
 ﻿using MyShop.BUS;
 using MyShop.DAO;
+using MyShop.UI.LoginPage;
 using MyShop.UI.MainPage;
 using MyShop.UI.MainPage.Pages;
 using System;
@@ -26,7 +27,7 @@ namespace MyShop.UI.MainPage
         const int Order = 3;
         const int Statistical = 4;
         const int AboutUs = 5;
-
+        const int Logout = 6;
         class Resoures
         {
             public string MainBgPath { get; set; }
@@ -41,11 +42,11 @@ namespace MyShop.UI.MainPage
         }
 
         ObservableCollection<Item> Items = null;
-        
+
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-           
+
             // init db
 
             new DatabaseUtilitites();
@@ -90,6 +91,11 @@ namespace MyShop.UI.MainPage
                 {
                     FontIcon = "InfoCircle",
                     ItemName = "About us"
+                },
+                new Item()
+                {
+                    FontIcon = "SignOut",
+                    ItemName = "Logout"
                 }
             };
 
@@ -127,7 +133,14 @@ namespace MyShop.UI.MainPage
             {
                 pageNavigation.NavigationService.Navigate(new AboutUs());
             }
-
+            if (selectedIndex == Logout)
+            {
+                Properties.Settings.Default.UsernameRemember = false;
+                Properties.Settings.Default.Save();
+                LoginWindow loginWindow = new LoginWindow();
+                loginWindow.Show();
+                this.Close();
+            }
             // reset border trước khi click
             resetBorder();
 
@@ -206,7 +219,7 @@ namespace MyShop.UI.MainPage
 
         private void resetBorder()
         {
-            foreach(var item in ListOfItems.Items)
+            foreach (var item in ListOfItems.Items)
             {
                 var container = ListOfItems.ItemContainerGenerator.ContainerFromItem(item) as ListViewItem;
                 if (container != null)

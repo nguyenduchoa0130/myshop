@@ -127,7 +127,7 @@
                             FontSize="12"
                             FontWeight="Bold"
                             Foreground="#353935">
-                            
+
                         </TextBlock>
                     </StackPanel>
 
@@ -184,7 +184,7 @@
                         FontWeight="Bold"
                         Foreground="#353935"/>
                     </StackPanel>
-                    
+
 
 
                 </Grid>

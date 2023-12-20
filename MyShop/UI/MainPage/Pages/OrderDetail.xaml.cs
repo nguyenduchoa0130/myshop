@@ -39,7 +39,7 @@ namespace MyShop.UI.MainPage.Pages
         }
 
 
-        public class Data 
+        public class Data
         {
             public int OrderID { get; set; }
             public DateTime CreateAt { get; set; }
