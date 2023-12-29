@@ -1,18 +1,10 @@
-# MyShop Desktop Application
+# Project Myshop
 
-- Made with C# language
-- Made with WPF Framework for User Interface
-- Made with SQL Database
-- The Project of **Windows Programming** Subject (Trần Duy Quang, M.Sc Instructor)
-- Scores: ?/10
-- Members of the Group:
+- Tech: WPF with .NET 7.0
+- Database: SQL server
+- Owner: Nguyen Duc Hoa 21424019
 
-    1. Nguyễn Thái Hiệp
-    2. Nguyễn Thị Ngọc Hải
-    3. Đỗ Đức Duy
-    4. Nguyễn Hồng Tấn
-
-# Requirements
+# Tools
 
 - Install [Visual Studio](https://visualstudio.microsoft.com/downloads/)
 - Install [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
@@ -20,7 +12,7 @@
 # Development
 
 ```
-- Run `MyShopDB_10.sql` file in Assets/scriptDBs/. folder
+- Run `myshopdb.sql` file in myshop\MyShop\Assets\ScriptDBs\myshopdb.sql
 - Install the project throught `setup1.exe` file
 ```
 
@@ -30,36 +22,27 @@
 - Run MyShop.exe
 ```
 
-### Note: 
-- This project runs on Microsoft .NET 7 framework
-- Please remember that entering your SQL Server login information correctly
-
 # Database
 
-![database](./Overview/0.PNG)
+![database](./Overview/diagram.png)
 
 # Overview
 
-- DashBoardPage
-    ![dashboard](./Overview/1.PNG)
-- HomePage
+1. Home Page
     ![home](./Overview/2.PNG)
-- CategoriesPage
+2. Overview with DashBoard
+    ![dashboard](./Overview/1.PNG)
+3. Detail Page
     ![productdetail](./Overview/8.PNG)
-- OrdersPage
+4. List Order Page
     ![orders](./Overview/5.PNG)
-- AddPordersPage
+5. Add Cart
     ![addorders](./Overview/10.PNG)
-- ReportPage
+6. Report Page
     ![report](./Overview/7.PNG)
-- CategoriesPage
+7. Categories Page
     ![cateogries](./Overview/3.PNG)
-- AddProductPage
+8. Extra Product
     ![user](./Overview/9.PNG)
-- ReportProcuctPage
+9. Report Revenue
     ![reportproduct](./Overview/6.PNG)
-
-Authors: Nguyễn Thái Hiệp, Nguyễn Thị Ngọc Hải, Đỗ Đức Duy, Nguyễn Hồng Tấn
-
-
-Thanks for watching.

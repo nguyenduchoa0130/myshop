@@ -30,10 +30,10 @@ namespace MyShop.DAO
         }
 
         public DatabaseUtilitites() {
-            _server = "sqlexpress";
+            _server = "QUOCTUAN\\QUOCTUAN";
             _databaseName = "MyShopDB";
-            _user = "admin";
-            _password = "admin";
+            _user = "sa";
+            _password = "1234";
             _connection = null;
         }
 
