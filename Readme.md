@@ -24,29 +24,29 @@
 
 # Database
 
-![database](./Overview/0x.PNG)
+![database](./Overview/0.PNG)
 
 # Overview
 
 - Video Demo: 
 
 - Dashboard Page
-    ![dashboard](./Overview/1x.PNG)
+    ![dashboard](./Overview/1.png)
 - Home Page
-    ![home](./Overview/2x.PNG)
+    ![home](./Overview/2.png)
 - Detail Page
-    ![productdetail](./Overview/3x.PNG)
+    ![productdetail](./Overview/3.png)
 - Order Page
-    ![orders](./Overview/4x.PNG)
+    ![orders](./Overview/4.png)
 - Create Order Page
-    ![addorders](./Overview/5x.PNG)
+    ![addorders](./Overview/5.png)
 - Report Page
-    ![report](./Overview/6x.PNG)
+    ![report](./Overview/6.png)
 - Category Page
-    ![cateogries](./Overview/7x.PNG)
+    ![cateogries](./Overview/7.png)
 - Extra Product Page
-    ![user](./Overview/8x.PNG)
+    ![user](./Overview/8.png)
 - Report Procuct Page
-    ![reportproduct](./Overview/9x.PNG)
+    ![reportproduct](./Overview/9.png)
 
 Thanks you
