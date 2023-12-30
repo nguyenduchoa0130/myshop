@@ -1,26 +1,18 @@
-# MyShop Desktop Application
+# Project MyShop about Mobile Phone
 
-- Made with C# language
-- Made with WPF Framework for User Interface
-- Made with SQL Database
-- The Project of **Windows Programming** Subject (Trần Duy Quang, M.Sc Instructor)
-- Scores: 10/10
-- Members of the Group:
-
-    1. Nguyễn Thái Hiệp
-    2. Nguyễn Thị Ngọc Hải
-    3. Đỗ Đức Duy
-    4. Nguyễn Hồng Tấn
+- Made with WPF C# .Net 7.0
+- Student: Nguyễn Đức Hòa
+- Student ID: 21424019
 
 # Requirements
 
-- Install [Visual Studio](https://visualstudio.microsoft.com/downloads/)
-- Install [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+- Install [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
+- Install [SQL Server 2019](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 
 # Development
 
 ```
-- Run `MyShopDB_10.sql` file in Assets/scriptDBs/. folder
+- Run `MyShopDB.sql` file in Assets/scriptDBs/. folder
 - Install the project throught `setup1.exe` file
 ```
 
@@ -30,17 +22,13 @@
 - Run MyShop.exe
 ```
 
-### Note: 
-- This project runs on Microsoft .NET 7 framework
-- Please remember that entering your SQL Server login information correctly
-
 # Database
 
 ![database](./Overview/0.PNG)
 
 # Overview
 
-- Video Demo: https://www.youtube.com/watch?v=UzZvBsYFgZI&t=45s
+- Video Demo: 
 
 - DashBoardPage
     ![dashboard](./Overview/1.PNG)
@@ -61,7 +49,4 @@
 - ReportProcuctPage
     ![reportproduct](./Overview/6.PNG)
 
-Authors: Nguyễn Thái Hiệp, Nguyễn Thị Ngọc Hải, Đỗ Đức Duy, Nguyễn Hồng Tấn
-
-
-Thanks for watching.
+Thanks you
