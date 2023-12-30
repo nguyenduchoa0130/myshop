@@ -12,7 +12,7 @@
 # Development
 
 ```
-- Run `MyShopDB.sql` file in Assets/scriptDBs/. folder
+- Run `MyShop.sql` file in Assets/scriptDBs/. folder
 - Install the app: myshop\Setup\Release\setup.exe
 ```
 
@@ -24,7 +24,7 @@
 
 # Database
 
-![database](./Overview/0.PNG)
+![database](./Overview/0x.PNG)
 
 # Overview
 
