@@ -36,7 +36,7 @@ namespace MyShop.UI
             this.DataContext = new Resoures()
             {
                 Logo = "Assets/Images/logo.png",
-                MainBgPath = "Assets/Images/main-bg.png"
+                MainBgPath = "Assets/Images/main-bg4.png"
             };
         }
 

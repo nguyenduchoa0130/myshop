@@ -5,11 +5,11 @@
     <TargetFramework>net7.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>TechLogo.ico</ApplicationIcon>
+    <ApplicationIcon>logo2.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="TechLogo.ico" />
+    <Content Include="logo2.ico" />
   </ItemGroup>
 
   <ItemGroup>
