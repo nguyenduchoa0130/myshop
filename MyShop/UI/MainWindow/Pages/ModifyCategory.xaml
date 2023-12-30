@@ -7,7 +7,7 @@
       xmlns:fa="clr-namespace:FontAwesome.WPF;assembly=FontAwesome.WPF"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="ModifyCategory"
+      Title="Chỉnh sửa danh mục"
       Loaded="Page_Loaded">
 
     <Grid>
@@ -19,7 +19,7 @@
         </Grid.RowDefinitions>
 
         <TextBlock
-            Text="Categories"
+            Text="Danh mục sản phẩm"
             Margin="30,0,0,10"
             Foreground="#8B4000"
             VerticalAlignment="Center"
@@ -333,7 +333,7 @@
                 <TextBlock
                     FontWeight="Medium"
                     Foreground="DarkRed"
-                    >Lưu thể loại</TextBlock>
+                    >Thêm danh mục</TextBlock>
             </StackPanel>
         </Button>
 
@@ -363,7 +363,7 @@
                 <TextBlock
                     FontWeight="Medium"
                     Foreground="DarkRed"
-                    >Xóa thể loại</TextBlock>
+                    >Xóa danh mục</TextBlock>
             </StackPanel>
         </Button>
     </Grid>

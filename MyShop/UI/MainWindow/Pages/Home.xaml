@@ -7,7 +7,7 @@
       xmlns:fa="clr-namespace:FontAwesome.WPF;assembly=FontAwesome.WPF"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Home"
+      Title="Trang chủ"
       Loaded="Page_Loaded">
     <Page.Resources>
         <local:RelativeToAbsoluteConverter x:Key="converter"/>
@@ -68,7 +68,7 @@
                         x:Name="SearchTermTextBox"
                         KeyDown="SearchTermTextBox_KeyDown">
                     </TextBox>
-                    <TextBlock IsHitTestVisible="False" Text="Tìm kiếm sản phẩm của bạn ở đây . . ." 
+                    <TextBlock IsHitTestVisible="False" Text="Tìm kiếm sản phẩm ở đây . . ." 
                                VerticalAlignment="Center"
                                FontSize="13"
                                HorizontalAlignment="Left" Margin="5,0,0,0"
@@ -98,7 +98,7 @@
                 Height="35"
                 Width="140"
                 Margin="10,0,0,0"
-                BorderThickness="0.5" BorderBrush="Orange" CornerRadius="18"
+                BorderThickness="0.5" BorderBrush="red" CornerRadius="18"
                  Background="WhiteSmoke" 
             >
                 <ComboBox 
@@ -111,12 +111,12 @@
 
                         </Style>
                     </ComboBox.ItemContainerStyle>
-                    <ComboBoxItem IsHitTestVisible="False" IsEnabled="False" IsSelected="True" >Sort: Giá SP</ComboBoxItem>
+                    <ComboBoxItem IsHitTestVisible="False" IsEnabled="False" IsSelected="True" >Sắp xếp: Giá</ComboBoxItem>
                     <ComboBoxItem>Dưới 5 triệu</ComboBoxItem>
                     <ComboBoxItem>Từ 5 - 10 triệu</ComboBoxItem>
                     <ComboBoxItem>Từ 10 - 15 triệu</ComboBoxItem>
                     <ComboBoxItem>Trên 15 triệu</ComboBoxItem>
-                    <ComboBoxItem >Tất cả giá</ComboBoxItem>
+                    <ComboBoxItem >Tất cả</ComboBoxItem>
                 </ComboBox>
             </Border>
             <Button

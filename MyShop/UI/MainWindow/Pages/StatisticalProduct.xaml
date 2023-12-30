@@ -9,7 +9,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Loaded="Page_Loaded"
-      Title="StatisticalProduct">
+      Title="Thống kê sản phẩm">
 
     <Page.Resources>
         <local:RelativeToAbsoluteConverter x:Key="converter"/>

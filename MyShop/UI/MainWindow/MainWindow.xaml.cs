@@ -62,7 +62,7 @@ namespace MyShop.UI.MainPage
             // Load Nav Background
             this.DataContext = new Resoures()
             {
-                MainBgPath = "Assets/Images/main-bg.png",
+                MainBgPath = "Assets/Images/main-bg4.png",
                 CloseIconPath = "Assets/Images/close-icon.png",
                 MinimizeIconPath = "Assets/Images/minimize-icon.png",
                 Logo = "Assets/Images/logo.png"
@@ -72,33 +72,33 @@ namespace MyShop.UI.MainPage
             {
                 new Item()
                 {
+                    FontIcon = "Home",
+                    ItemName = "Trang chủ"
+                },
+                new Item()
+                {
                     FontIcon = "Dashboard",
                     ItemName = "Dashboard"
                 },
                 new Item()
                 {
-                    FontIcon = "Home",
-                    ItemName = "Home"
-                },
-                new Item()
-                {
                     FontIcon = "Gears",
-                    ItemName = "Categories"
+                    ItemName = "Danh mục hàng"
                 },
                 new Item()
                 {
                     FontIcon = "Tags",
-                    ItemName = "Promotions"
+                    ItemName = "Khuyến mãi"
                 },
                 new Item()
                 {
                     FontIcon = "ShoppingCart",
-                    ItemName = "Orders",
+                    ItemName = "Đặt hàng",
                 },
                 new Item()
                 {
                     FontIcon = "Briefcase",
-                    ItemName = "Report"
+                    ItemName = "Báo cáo"
                 }
             };
 
@@ -206,7 +206,6 @@ namespace MyShop.UI.MainPage
         {
             if (ListOfItems.Items.Count > 0)
             {
-                // Phải chờ cho nó load xong thì mới gán border được haha
                 await Task.Delay(50);
                 var container = ListOfItems.ItemContainerGenerator.ContainerFromIndex(_currentPage) as ListViewItem;
                 if (container != null)

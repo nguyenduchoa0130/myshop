@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MyShop.UI.MainPage"
         xmlns:fa="clr-namespace:FontAwesome.WPF;assembly=FontAwesome.WPF"
         mc:Ignorable="d"
-        Title="TechShop" Loaded="Window_Loaded" Height="600" Width="1000" WindowStartupLocation="CenterScreen">
+        Title="Ứng dụng My Shop" Loaded="Window_Loaded" Height="600" Width="1000" WindowStartupLocation="CenterScreen">
 
     
     <Window.Resources>

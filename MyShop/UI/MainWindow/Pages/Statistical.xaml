@@ -9,7 +9,7 @@
       Loaded="Page_Loaded"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Statistical">
+      Title="Thống kê">
     <Page.Resources>
         <local:RelativeToAbsoluteConverter x:Key="converter"/>
         <local:DecimalToCurrencyConverter x:Key="currencyConverter"/>

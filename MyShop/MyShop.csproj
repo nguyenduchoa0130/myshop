@@ -82,10 +82,7 @@
     <None Update="Assets\Images\item2-bg.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Assets\Images\logo.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Assets\Images\main-bg.png">
+    <None Update="Assets\Images\main-bg4.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Assets\Images\sp\3013.png">

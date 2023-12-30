@@ -8,7 +8,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Loaded="Page_Loaded"
-      Title="UpdateOrder">
+      Title="Cập nhật đơn hàng">
     <Page.Resources>
         <local:RelativeToAbsoluteConverter x:Key="absoluteConverter"/>
         <local:DecimalToCurrencyConverter x:Key="currencyConverter"/>
@@ -455,7 +455,7 @@
                 <TextBlock
                     FontWeight="Medium"
                     Foreground="DarkRed"
-                    >Lưu đơn hàng</TextBlock>
+                    >Cập nhật</TextBlock>
             </StackPanel>
         </Button>
     </Grid>

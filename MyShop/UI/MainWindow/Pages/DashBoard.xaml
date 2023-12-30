@@ -7,7 +7,7 @@
       xmlns:local="clr-namespace:MyShop.UI.MainPage.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="DashBoard"
+      Title="Thống kê"
       Loaded="Page_Loaded">
     <Page.Resources>
         <local:RelativeToAbsoluteConverter x:Key="converter"/>
@@ -166,7 +166,7 @@
                     <RowDefinition />
                 </Grid.RowDefinitions>
                 <TextBlock
-                    Text="Top 5 sản phẩm đang sắp hết hàng"
+                    Text="Sản phẩm đang sắp hết hàng"
                     Margin="20, 10, 10, 10"
                     Grid.ColumnSpan="2"
                     Foreground="#8B4000"

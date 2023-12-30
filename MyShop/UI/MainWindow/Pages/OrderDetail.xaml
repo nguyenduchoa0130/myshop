@@ -7,7 +7,7 @@
       xmlns:fa="clr-namespace:FontAwesome.WPF;assembly=FontAwesome.WPF"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="OrderDetail"
+      Title="Đơn hàng"
       Loaded="Page_Loaded">
 
     <Page.Resources>
@@ -30,7 +30,7 @@
         <!--Hiển thị title-->
         <TextBlock
             Grid.Column="1"
-            Text="Orders"
+            Text="Đơn hàng"
             Margin="0,0,0,10"
             Foreground="#8B4000"
             VerticalAlignment="Center"
@@ -178,7 +178,7 @@
                             Foreground="#8B4000"
                         />
                         <TextBlock
-                            Text="Mã HD"
+                            Text="Mã hóa đơn"
                             FontSize="12"
                             FontWeight="Bold"
                             Foreground="#353935">

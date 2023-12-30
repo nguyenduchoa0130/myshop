@@ -6,9 +6,13 @@
         xmlns:local="clr-namespace:MyShop.UI"
         xmlns:fa="clr-namespace:FontAwesome.WPF;assembly=FontAwesome.WPF"
         mc:Ignorable="d"
-        Title="ConfigWindow" Height="350" Width="310" WindowStartupLocation="CenterScreen"
-        Loaded="Window_Loaded">
+        Title="Trang cấu hình" Height="350" Width="310" WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded" Background="#90d0fe">
     <Grid Name="MainContainer">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="239*"/>
+            <ColumnDefinition Width="71*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="45"/>
             <RowDefinition/>
@@ -21,16 +25,14 @@
 
         <!--Hiển thị title-->
         <TextBlock
-            Grid.Column="1"
-            Text="Database configuration"
-            Margin="10"
+            Text="Thông tin kết nối database"
+            Margin="10,0,10,0"
             Foreground="#8B4000"
             VerticalAlignment="Center"
             FontSize="20"
             FontWeight="Bold"
-            FontFamily="Segoe UI"
-            >
-        </TextBlock>
+            FontFamily="Segoe UI" Grid.ColumnSpan="2"
+            />
 
         <Border 
             Grid.Row="1"
@@ -38,8 +40,8 @@
             Background="White"
             Height="30"
             Width="275"
-            Margin="10"
-            HorizontalAlignment="Left">
+            Margin="10,14,0,14"
+            HorizontalAlignment="Left" Grid.ColumnSpan="2">
             <Grid
                 Width="265"
                 Margin="0"
@@ -51,7 +53,7 @@
                     Width="265"
                     x:Name="ServerTermTextBox">
                 </TextBox>
-                <TextBlock IsHitTestVisible="False" Text="Nhập server" 
+                <TextBlock IsHitTestVisible="False" Text="Nhập server name" 
                                VerticalAlignment="Center"
                                FontSize="13"
                                HorizontalAlignment="Left" Margin="5,0,0,0"
@@ -76,8 +78,8 @@
             Background="White"
             Height="30"
             Width="275"
-            Margin="10"
-            HorizontalAlignment="Left">
+            Margin="10,14,0,14"
+            HorizontalAlignment="Left" Grid.ColumnSpan="2">
             <Grid
                 Width="265"
                 Margin="0"
@@ -114,8 +116,8 @@
             Background="White"
             Height="30"
             Width="275"
-            Margin="10"
-            HorizontalAlignment="Left">
+            Margin="10,14,0,13"
+            HorizontalAlignment="Left" Grid.ColumnSpan="2">
             <Grid
                 Width="265"
                 Margin="0"
@@ -152,8 +154,8 @@
             Background="White"
             Height="30"
             Width="275"
-            Margin="10"
-            HorizontalAlignment="Left">
+            Margin="10,14,0,14"
+            HorizontalAlignment="Left" Grid.ColumnSpan="2">
             <Grid
                 Width="265"
                 Margin="0"
@@ -188,14 +190,14 @@
         <Button
                 Grid.Row="5" 
                 VerticalAlignment="Center" 
-                HorizontalAlignment="Center"
+                HorizontalAlignment="Left"
                 Name="Button"
                 Width="110"
                 Height="35"
                 Style="{StaticResource MyButtonStyle}"
                 BorderThickness="0.5"
                 BorderBrush="Orange"
-                Click="Button_Click"
+                Click="Button_Click" Margin="100,0,0,0"
             >
             <StackPanel
                 Orientation="Horizontal">
@@ -212,7 +214,7 @@
                         FontWeight="Bold"
                         Foreground="#8B4000"
                         VerticalAlignment="Center"
-                    >Đăng nhập</TextBlock>
+                    >Kết nối</TextBlock>
             </StackPanel>
         </Button>
     </Grid>
