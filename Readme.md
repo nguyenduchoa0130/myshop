@@ -13,7 +13,7 @@
 
 ```
 - Run `MyShopDB.sql` file in Assets/scriptDBs/. folder
-- Install the project throught `setup1.exe` file
+- Install the app: myshop\Setup\Release\setup.exe
 ```
 
 # Deployment
@@ -30,23 +30,23 @@
 
 - Video Demo: 
 
-- DashBoardPage
-    ![dashboard](./Overview/1.PNG)
-- HomePage
-    ![home](./Overview/2.PNG)
-- DetailPage
-    ![productdetail](./Overview/8.PNG)
-- OrdersPage
-    ![orders](./Overview/5.PNG)
-- AddPordersPage
-    ![addorders](./Overview/10.PNG)
-- ReportPage
-    ![report](./Overview/7.PNG)
-- CategoriesPage
-    ![cateogries](./Overview/3.PNG)
-- AddProductPage
-    ![user](./Overview/9.PNG)
-- ReportProcuctPage
-    ![reportproduct](./Overview/6.PNG)
+- Dashboard Page
+    ![dashboard](./Overview/1x.PNG)
+- Home Page
+    ![home](./Overview/2x.PNG)
+- Detail Page
+    ![productdetail](./Overview/3x.PNG)
+- Order Page
+    ![orders](./Overview/4x.PNG)
+- Create Order Page
+    ![addorders](./Overview/5x.PNG)
+- Report Page
+    ![report](./Overview/6x.PNG)
+- Category Page
+    ![cateogries](./Overview/7x.PNG)
+- Extra Product Page
+    ![user](./Overview/8x.PNG)
+- Report Procuct Page
+    ![reportproduct](./Overview/9x.PNG)
 
 Thanks you
