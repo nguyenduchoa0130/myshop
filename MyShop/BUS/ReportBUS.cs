@@ -46,7 +46,6 @@ namespace MyShop.BUS
                 {
                     if (order.CreateAt.Month == month && order.CreateAt.Year == year)
                     {
-                        // này nguy hiểm :))) nhưng kệ 
                         prices.Add((decimal)order.FinalTotal);
                     }
                 }
