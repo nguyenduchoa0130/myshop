@@ -54,6 +54,7 @@ namespace MyShop.UI.MainPage.Pages
             }
 
             public event PropertyChangedEventHandler? PropertyChanged;
+
         }
 
         public ProductDetail(Home home, ProductDTO product, Frame pageNavigation, ProgressBar loadingProgressBar)
@@ -95,6 +96,7 @@ namespace MyShop.UI.MainPage.Pages
             _currentData = data;
 
             DataContext = data;
+
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -126,10 +128,6 @@ namespace MyShop.UI.MainPage.Pages
             var clonedProduct = (ProductDTO)_product.Clone();
 
             _pageNavigation.NavigationService.Navigate(new UpdateProduct(_product, _category, _pageNavigation));
-        }
-
-        private void AddOrder_Click(object sender, RoutedEventArgs e)
-        {
         }
 
         int flag = 0; // bỏ qua lần đầu

@@ -49,16 +49,6 @@ namespace MyShop.UI.MainPage
 
         private async void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
-            // init db
-
-            //new DatabaseUtilitites(
-            //    "sqlexpress",
-            //    "MyShopDB_9",
-            //    "admin",
-            //    "admin"
-            //    );
-
             // Load Nav Background
             this.DataContext = new Resoures()
             {
@@ -72,13 +62,13 @@ namespace MyShop.UI.MainPage
             {
                 new Item()
                 {
-                    FontIcon = "Home",
-                    ItemName = "Trang chủ"
+                    FontIcon = "Dashboard",
+                    ItemName = "Dashboard"
                 },
                 new Item()
                 {
-                    FontIcon = "Dashboard",
-                    ItemName = "Dashboard"
+                    FontIcon = "Home",
+                    ItemName = "Trang chủ"
                 },
                 new Item()
                 {

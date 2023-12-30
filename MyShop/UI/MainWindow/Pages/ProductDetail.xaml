@@ -182,7 +182,7 @@
                                         Text="{Binding Promotion.DiscountPercent, Converter={StaticResource promotionConverter}}">
                                     </TextBlock>
                                 </Border>
-                                
+
                             </StackPanel>
                         </StackPanel>
 
@@ -392,36 +392,6 @@
 
             </Grid>
         </Border>
-
-        <!--Hiển thị nút bấm thêm vào giỏ hàng-->
-        <Button
-            Name="AddOrder"
-            Grid.Row="2"
-            Width="155"
-            Height="30"
-            Style="{StaticResource MyButtonStyle}"
-            BorderThickness="0.5"
-            BorderBrush="Orange"
-            HorizontalAlignment="Right"
-            Margin="0,0,-50,0"
-            Click="AddOrder_Click"
-            >
-            <StackPanel
-                Orientation="Horizontal">
-                <fa:ImageAwesome 
-                    Width="11"
-                    Height="11"
-                    Margin="0, 0, 8, 0"
-                    RenderOptions.BitmapScalingMode="HighQuality"
-                    Icon="PlusCircle"
-                    Foreground="#8B4000"
-                        />
-                <TextBlock
-                    FontWeight="Medium"
-                    Foreground="#8B4000"
-                    >Thêm vào giỏ hàng</TextBlock>
-            </StackPanel>
-        </Button>
 
         <!--Hiển thị nút bấm cập nhật-->
         <Button
