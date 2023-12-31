@@ -307,7 +307,7 @@
             </Grid>
                 
         </Border>
-        <!--Hiển thị nút bấm lưu -->
+        
         <Button
             Name="SaveCategory"
             Grid.Row="3"

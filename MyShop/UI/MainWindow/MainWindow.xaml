@@ -23,18 +23,15 @@
         
         <Grid Name="MainContent" Grid.Row="1">
             <Grid.ColumnDefinitions>
-                <!--chia width = 250 cho Nav, còn lại là Content-->
                 <ColumnDefinition Width="180"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="40"/>
-                <!--logo ở đây nhé-->
                 <RowDefinition Height="70"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <!--nav - background-->
             <Image 
             Name="MainBackground"
             Source="{Binding MainBgPath, Converter={StaticResource converter}}"
@@ -43,8 +40,6 @@
             Grid.ColumnSpan="2"
             >
             </Image>
-
-            <!--logo-->
             <Image
             Name="Logo"
             Source="{Binding Logo, Converter={StaticResource converter}}"
@@ -56,7 +51,6 @@
               Grid.Row="2"
               Background="Transparent">
                 <Grid.RowDefinitions>
-                    <!--chia width = 250 cho Nav, còn lại là Content-->
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="50"/>
                 </Grid.RowDefinitions>
@@ -110,8 +104,6 @@
                         </Style>
                     </ListView.ItemContainerStyle>
                 </ListView>
-
-                <!--Hiển thị nút bấm đăng xuất-->
                 <Button
                 Grid.Row="1" 
                 VerticalAlignment="Center" 

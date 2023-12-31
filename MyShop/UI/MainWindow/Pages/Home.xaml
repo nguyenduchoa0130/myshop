@@ -194,13 +194,13 @@
                                         Foreground="#8B4000"
                                            />
 
-                                    <!-- binding -->
+                                    
                                     <TextBlock Name="CatName"
                                                Text="{Binding CatName}"
                                                />
                                 </StackPanel>
 
-                                <!-- binding -->
+                                
                                 <TextBlock Name="ProName"
                                            Text="{Binding ProName}"
                                            TextWrapping="Wrap"
@@ -209,7 +209,7 @@
                                            FontWeight="Bold"
                                            />
 
-                                <!-- binding -->
+                                
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Name="priceTextBlock"
                                            Text="{Binding PromotionPrice, Converter={StaticResource currencyConverter}}"

@@ -27,7 +27,7 @@
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
 
-        <!--Hiển thị nút bấm trở về-->
+        
         <Button
             Name="BackButton"
             Width="85"
@@ -428,7 +428,7 @@
                                Foreground="#353935"/>
         </StackPanel>
 
-        <!--Hiển thị nút bấm lưu -->
+        
         <Button
             Name="SaveOrder"
             Grid.Row="4"

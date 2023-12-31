@@ -17,7 +17,7 @@
             <RowDefinition Height="1.2*"/>
             <RowDefinition Height="80"/>
         </Grid.RowDefinitions>
-        <!--Hiển thị nút bấm trở về-->
+        
         <Button
             Name="BackButton"
             Width="85"
@@ -207,7 +207,7 @@
         </Border>
 
 
-        <!--Hiển thị nút bấm lưu -->
+        
         <Button
             Name="SaveCategory"
             Grid.Row="3"

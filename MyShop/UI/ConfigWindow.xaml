@@ -21,9 +21,6 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-
-
-        <!--Hiển thị title-->
         <TextBlock
             Text="Thông tin kết nối database"
             Margin="10,0,10,0"
@@ -185,8 +182,6 @@
                 </TextBlock>
             </Grid>
         </Border>
-
-        <!--Hiển thị nút bấm đăng xuất-->
         <Button
                 Grid.Row="5" 
                 VerticalAlignment="Center" 

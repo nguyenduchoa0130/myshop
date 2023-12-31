@@ -27,7 +27,7 @@
         </Grid.RowDefinitions>
 
 
-        <!--Hiển thị nút bấm trở về-->
+        
         <Button
             Name="BackButton"
             Width="85"

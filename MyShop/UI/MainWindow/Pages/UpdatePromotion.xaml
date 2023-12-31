@@ -99,8 +99,6 @@
                         </Grid>
                     </Border>
                 </StackPanel>
-
-                <!--Hiển thị nhập biểu tượng thể loại-->
                 <StackPanel Margin="0, 10, 0, 10" Orientation="Vertical"  Grid.Column="1" HorizontalAlignment="Center">
                     <TextBlock Margin="10,0,0,0" 
                                Text="Giá trị khuyến mãi"  
@@ -144,9 +142,6 @@
                         </Grid>
                     </Border>
                 </StackPanel>
-
-                <!--Hiển thị nhập mô tả sản phẩm-->
-         
             </Grid>
 
         </Border>

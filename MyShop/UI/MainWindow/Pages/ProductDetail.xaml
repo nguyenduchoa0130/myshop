@@ -27,7 +27,7 @@
             <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
 
-        <!--Hiển thị nút bấm trở về-->
+        
         <Button
             Name="BackButton"
             Width="85"
@@ -122,7 +122,7 @@
                             Foreground="#8B4000"
                         />
 
-                                <!-- binding -->
+                                
                                 <TextBlock
                              Text="Loại Sản Phẩm"
                              Foreground="#8B4000"
@@ -148,7 +148,7 @@
                             Foreground="#8B4000"
                         />
 
-                                <!-- binding -->
+                                
                                 <TextBlock
                              Text="Giá bán"
                              
@@ -199,7 +199,7 @@
                             Foreground="#8B4000"
                         />
 
-                                <!-- binding -->
+                                
                                 <TextBlock
                              Text="SL Tồn Kho"
                              
@@ -231,7 +231,7 @@
                             Foreground="#8B4000"
                         />
 
-                                <!-- binding -->
+                                
                                 <TextBlock
                              Text="Ram"
                              Foreground="#8B4000"
@@ -259,7 +259,7 @@
                             Foreground="#8B4000"
                         />
 
-                                <!-- binding -->
+                                
                                 <TextBlock
                              Text="Rom"
                              
@@ -289,7 +289,7 @@
                             Foreground="#8B4000"
                         />
 
-                                <!-- binding -->
+                                
                                 <TextBlock
                              Text="Dung lượng Pin"
                              
@@ -319,7 +319,7 @@
                             Foreground="#8B4000"
                         />
 
-                                <!-- binding -->
+                                
                                 <TextBlock
                              Text="Kích Thước Màn Hình"
                              

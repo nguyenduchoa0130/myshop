@@ -20,7 +20,7 @@
             <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
 
-        <!--Hiển thị nút bấm trở về-->
+        
         <Button
             Name="BackButton"
             Width="85"
@@ -588,7 +588,7 @@
             </Grid>
         </Border>
 
-        <!--Hiển thị nút bấm lưu -->
+        
         <Button
             Name="SaveProduct"
             Grid.Row="3"
