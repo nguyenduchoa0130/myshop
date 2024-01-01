@@ -107,6 +107,7 @@
                 <ComboBoxItem>Năm 2021</ComboBoxItem>
                 <ComboBoxItem>Năm 2022</ComboBoxItem>
                 <ComboBoxItem>Năm 2023</ComboBoxItem>
+                <ComboBoxItem>Năm 2024</ComboBoxItem>
             </ComboBox>
         </Border>
 

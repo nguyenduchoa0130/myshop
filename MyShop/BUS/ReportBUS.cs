@@ -233,7 +233,7 @@ namespace MyShop.BUS
             _orders = await getData();
             List<Decimal> result = new List<Decimal>();
 
-            for (int year = 2021; year <= 2023; year++)
+            for (int year = 2021; year <= 2024; year++)
             {
                 List<decimal> prices = new List<decimal>();
                 foreach (var order in _orders)
@@ -257,7 +257,7 @@ namespace MyShop.BUS
             _orders = await getData();
             List<Decimal> result = new List<Decimal>();
 
-            for (int year = 2021; year <= 2023; year++)
+            for (int year = 2021; year <= 2024; year++)
             {
                 List<decimal> prices = new List<decimal>();
                 foreach (var order in _orders)
@@ -282,7 +282,7 @@ namespace MyShop.BUS
             _orders = await getData();
             List<int> result = new List<int>();
 
-            for (int year = 2021; year <= 2023; year++)
+            for (int year = 2021; year <= 2024; year++)
             {
                 int quantity = 0;
                 foreach (var order in _orders)

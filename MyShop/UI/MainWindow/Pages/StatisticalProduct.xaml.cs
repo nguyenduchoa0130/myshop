@@ -73,6 +73,7 @@ namespace MyShop.UI.MainPage.Pages
                         "Năm 2021",
                         "Năm 2022",
                         "Năm 2023",
+                        "Năm 2024",
                     }
                 });
             Title.Text = "Đang hiển thị chế độ xem theo năm";
@@ -218,6 +219,11 @@ namespace MyShop.UI.MainPage.Pages
                 {
                     displayMonthMode(_currentProduct, 2023);
                     _currentYear = 2023;
+                }
+                if (i == 4)
+                {
+                    displayMonthMode(_currentProduct, 2024);
+                    _currentYear = 2024;
                 }
             }
         }
