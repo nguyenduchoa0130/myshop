@@ -27,7 +27,7 @@
 ![database](./Overview/0.png)
 
 # Overview
-
+- Link git : https://github.com/nguyenduchoa0130/myshop
 - Video Demo downoload from: https://github.com/nguyenduchoa0130/myshop/blob/master/DemoMyShop.zip
 
 - Dashboard Page
