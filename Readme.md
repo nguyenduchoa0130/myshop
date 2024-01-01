@@ -28,7 +28,7 @@
 
 # Overview
 
-- Video Demo: unzip: DemoMyShop.zip
+- Video Demo downoload from: https://github.com/nguyenduchoa0130/myshop/blob/master/DemoMyShop.zip
 
 - Dashboard Page
     ![dashboard](./Overview/1.png)
