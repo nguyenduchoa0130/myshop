@@ -28,7 +28,7 @@
 
 # Overview
 
-- Video Demo: 
+- Video Demo: unzip: DemoMyShop.zip
 
 - Dashboard Page
     ![dashboard](./Overview/1.png)
