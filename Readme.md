@@ -28,8 +28,7 @@
 
 # Overview
 - Link git : https://github.com/nguyenduchoa0130/myshop
-- Video Demo downoload from: https://github.com/nguyenduchoa0130/myshop/blob/master/DemoMyShop.zip
-
+- Video Demo downoload from: https://www.youtube.com/watch?v=74pXmFw4uNM
 - Dashboard Page
     ![dashboard](./Overview/1.png)
 - Home Page
